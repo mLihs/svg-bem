@@ -1,0 +1,4 @@
+node_modules
+.DS_Store
+SVG BEM.sketchplugin
+src/svgo-plugins.js

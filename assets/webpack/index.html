@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+	
+</head>
+<body>
+
+<style type="text/css">
+	button,
+input,
+optgroup,
+select,
+textarea,
+fieldset {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+  outline: none;
+}
+
+	body {
+		display: flex;
+		flex-flow: nowrap;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+		color: #282D37;
+		font-family: -apple-system, Helvetica, BlinkMacSystemFont, sans-serif;
+		font-size: 17px;
+		box-sizing: border-box;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style: none;
+		display: block;
+		padding: 6px 0;
+	}
+
+	button {
+		margin: 0;
+		border: 1px solid #2E3034;
+		background: white;
+		border-radius: 4px;
+		padding: 6px 12px;
+		min-width: 120px;
+		font-size: 16px;
+	}
+
+	button:hover {
+		background: #EDEDED;
+	}
+
+	button:active {
+		background: #DBDBDB;
+	}
+
+	fieldset {
+		border: none;
+		padding: 0;
+	}
+
+	.textfield {
+		border-radius: 4px;
+		padding: 6px 0px;
+		border: 1px solid #dbe0e8;
+		position: relative;
+		-webkit-appearance: none;
+		background: white;
+		
+	}
+	.textfield__name{
+		background: #dbe0e8;
+		padding: 6px 12px;
+		line-height: 27px;
+	}
+
+	.textfield__inputfield {
+		border: none;
+		border-radius: 0 4px 4px 0;
+		margin: 0;
+		padding: 0 12px;
+		font-size: 16px;
+		line-height: 28px;
+		color:#2E3034;
+		-webkit-appearance: none;
+	}
+
+	.settting__button{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 24px;
+	}
+</style>
+
+<div class="bcontent-wrapper">
+<!-- Header -->
+<h1>Export All Symbols as Assets</h1>
+
+<form> 
+  <h3>Bem SVG Export Settings</h3> 
+  <fieldset>
+    <ul>
+      <li> 
+        <label>
+          <input type="checkbox" id="id-to-class" name="id-to-class" value="false">
+          ID To Class
+        </label>
+      </li>
+      <li> 
+        <label>
+           <input type="checkbox" id="bem-conversion" name="bem-conversion" value="false">
+           BEM Conversion
+        </label>
+      </li>
+    </ul>
+    <ul>
+    	<li>
+    		<label class="textfield">
+    			<span class="textfield__name">BEM Separator Character:</span><input class="textfield__inputfield" id="bem-sperator" name="bem-sperator" size="4" maxlength="4" autocomplete="off">
+    		</label>
+    	</li>
+    	<li>
+    		<label class="textfield">
+    			<span class="textfield__name">Special Character Replacement:</span><input class="textfield__inputfield" id="special-char" name="special-char" size="4" maxlength="1" utocomplete="off">
+    		</label>
+    	</li>
+    </ul>
+  </fieldset> 
+</form>
+
+<div class="settting__button">
+	<button id="reset-setings">Reset</button>
+	<button id="set-setting">Set</button>
+</div>
+</div>
+<!-- Symbols List -->
+
+<script type="text/javascript" src="jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript" src="../webpack/jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript">
+
+
+
+	$(document).ready(function(){
+
+		var testObjec = {"enabled": true, "params": {"idToClass": true, "bem": true, "bemSeperator": "??+", "charSeperator": "-"}};
+
+		window.someGlobalFunctionDefinedInTheWebview = function(arg) {
+
+			var pluginArray = arg.plugins;
+
+			pluginArray.forEach(function(e){
+				console.log(e)
+
+				if(e.path && e.path.indexOf('convertIdToClass')!=-1){
+					var name = e.path;
+					console.log("gosetValues")
+					setValues(e);
+				}
+			})
+		}
+
+		function setCheckBox (elm, val){
+			if (val){ 
+				$(elm).prop('checked', true);
+			} else if (!val){
+				$(elm).prop('checked',false);
+			}
+		}
+
+		function getValues(){
+			var obj = new Object()
+			var idToClass = $('#id-to-class').val();
+			var bemConversion = $('#bem-conversion').val();
+			var bemSeperator = $('#bem-sperator').val();
+			var specialChar = $('#special-char').val();
+			obj = {'idToClass': idToClass, 'bemConversion':bemConversion, 'bemSeperator':bemSeperator, 'specialChar':specialChar}
+			window.postMessage('setNewValues', obj);
+			console.log(obj);
+		}
+
+
+		function setValues(value){
+			var params = value.params;
+			setCheckBox ('#id-to-class', params.idToClass);
+			setCheckBox ('#bem-conversion', params.bem);
+			$('#bem-sperator').val(params.bemSeperator);
+			$('#special-char').val(params.charSeperator);
+		}
+		
+		function resetValue(){
+
+		}
+
+		$('#set-setting').click(function() {
+  			getValues();
+  			return false;
+		});
+
+		$('#reset-setting').click(function() {
+  			resetValue();
+  			return false;
+		});
+
+		function init(){
+			window.postMessage('initJQuery', 'Init Jquery');
+			console.log("running")
+		}
+
+		//setValues(testObjec)
+		init();
+	})
+</script>
+
+
+</body>
+</html>

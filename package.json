@@ -1,0 +1,37 @@
+{
+  "name": "svg-bem",
+  "version": "1.8.1",
+  "license": "MIT",
+  "description": "A Plugin for SVG assets to convert IDs to Classes, create BEM Naming Based on Layes and using SVGO to compresse and Clean up SVGs, right when you export them. This Plugin *requires* Sketch 3.8. Its based on the original Svgo Compressor from BohemianCoding (https://raw.githubusercontent.com/BohemianCoding/svgo-compressor)",
+  "skpm": {
+    "name": "SVG BEM",
+    "main": "SVG BEM.sketchplugin",
+    "manifest": "src/manifest.json",
+    "appcast": "https://raw.githubusercontent.com/BohemianCoding/svgo-compressor/develop/.appcast.xml",
+    "assets": [
+      "assets/**/*"
+    ]
+  },
+  "main": "src/plugin.js",
+  "scripts": {
+    "build": "node ./scripts/build-plugins.js && skpm-build",
+    "watch": "skpm-build --watch",
+    "start": "skpm-build --watch --run",
+    "postinstall": "npm run build && skpm-link",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "skpm publish --appcast=.appcast.xml"
+  },
+  "author": "Sketch",
+  "devDependencies": {
+    "@skpm/builder": "^0.5.10"
+  },
+  "repository": "https://github.com/mLihs/svg-bem",
+  "dependencies": {
+    "@skpm/child_process": "^0.2.4",
+    "@skpm/dialog": "^0.2.3",
+    "@skpm/fs": "^0.2.0",
+    "@skpm/path": "^0.1.0",
+    "sketch-module-web-view": "^3.0.7",
+    "svgo": "^1.2.0"
+  }
+}

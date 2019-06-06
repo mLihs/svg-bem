@@ -1,6 +1,6 @@
-# SVGO Compressor
+# SVGO BEM
 
-A Plugin that compresses SVG assets using SVGO, right when you export them. This Plugin *requires* Sketch 3.8.
+A Plugin that compresses SVG assets using SVGO, right when you export them. This Plugin *requires* Sketch 52
 
 ## Install
 

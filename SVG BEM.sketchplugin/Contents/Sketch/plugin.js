@@ -65915,7 +65915,7 @@ module.exports = {
     "params": {
       "idToClass": true,
       "bem": true,
-      "bemSeperator": "??+",
+      "bemSeperator": "__",
       "charSeperator": "-"
     }
   }]

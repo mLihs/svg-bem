@@ -11,23 +11,6 @@ ${plugins.map(p => `  ${p}: require('svgo/plugins/${p}')`).join(',\n')}
 }
 `)
 
-// check if all the plugins are documented
-const readme = fs.readFileSync(path.join(__dirname, '../README.md'), 'utf8')
-const pluginDocumented = readme.match(/^#### .*\n/gm).map(m => m.replace('####', '').trim())
-
-plugins.forEach(p => {
-  const index = pluginDocumented.indexOf(p)
-  if (index === -1) {
-    console.log(`⚠️   Missing documentation for ${p} (./node_modules/svgo/plugins/${p}.js)`)
-  } else {
-    pluginDocumented.splice(index, 1)
-  }
-})
-
-pluginDocumented.forEach(p => {
-  console.log(`⚠️   Extra documentation for non-existent ${p}`)
-})
-
 // check the default config
 require('../src/defaultConfig').plugins.forEach(p => {
   if (plugins.indexOf(p.name) === -1) {

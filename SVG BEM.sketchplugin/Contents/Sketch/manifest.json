@@ -17,8 +17,8 @@
       }
     }
   ],
-  "version": "1.8.3",
-  "description": "A Plugin for SVG assets to convert IDs to Classes, create BEM Naming Based on Layes and using SVGO to compresse and Clean up SVGs, right when you export them. This Plugin *requires* Sketch 3.8. Its based on the original Svgo Compressor from BohemianCoding (https://raw.githubusercontent.com/BohemianCoding/svgo-compressor)",
+  "version": "1.0.0",
+  "description": "A Plugin for SVG export to convert IDs to Classes, create BEM Naming Based on Layes and using SVGO to compresse and Clean up SVGs, right when you export them. This Plugin *requires* Sketch 52. The Plugin bases on the original Svgo Compressor from BohemianCoding (https://raw.githubusercontent.com/BohemianCoding/svgo-compressor)",
   "name": "SVG BEM",
   "disableCocoaScriptPreprocessor": true,
   "appcast": "https://raw.githubusercontent.com/mLihs/svg-bem/master/.appcast.xml",

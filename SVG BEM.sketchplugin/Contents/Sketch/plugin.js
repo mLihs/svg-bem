@@ -98,7 +98,7 @@ var exports =
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/61db4fd04e834d88ffe1de0fe421230e.html").path();
+module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/44fdac7afdfb49d2470c75ebda1c923b.html").path();
 
 /***/ }),
 
@@ -65999,15 +65999,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function openSettings() {
   // Plugin was run from the menu, so let's open the settings window
+  var svgoJSON = Object(_getConfig__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
   function writeNewSvgo(value) {
     _skpm_fs__WEBPACK_IMPORTED_MODULE_2___default.a.writeFileSync(_getConfig__WEBPACK_IMPORTED_MODULE_0__["svgoJSONFilePath"], JSON.stringify(value, null, '  '), 'utf8');
   }
 
   function doResetSvgo() {
     _skpm_fs__WEBPACK_IMPORTED_MODULE_2___default.a.writeFileSync(_getConfig__WEBPACK_IMPORTED_MODULE_0__["svgoJSONFilePath"], JSON.stringify(__webpack_require__(/*! ./defaultConfig */ "./src/defaultConfig.js"), null, '  '), 'utf8');
+    svgoJSON = Object(_getConfig__WEBPACK_IMPORTED_MODULE_0__["default"])();
+    setValues();
+    console.log("reset!");
   }
 
-  var svgoJSON = Object(_getConfig__WEBPACK_IMPORTED_MODULE_0__["default"])();
   var win = new sketch_module_web_view__WEBPACK_IMPORTED_MODULE_8___default.a({
     width: 800,
     height: 600,
@@ -66015,7 +66019,7 @@ function openSettings() {
   });
 
   function setValues() {
-    win.webContents.executeJavaScript("someGlobalFunctionDefinedInTheWebview(".concat(JSON.stringify(svgoJSON, null, ""), ")")).then(function (res) {// do something with the result
+    win.webContents.executeJavaScript("webviewSetValues(".concat(JSON.stringify(svgoJSON, null, ""), ")")).then(function (res) {// do something with the result
     });
   }
 
@@ -66023,8 +66027,12 @@ function openSettings() {
 
 
   win.webContents.on('initJQuery', function (s) {
-    sketch.UI.message(s);
+    /*sketch.UI.message(s)*/
     setValues();
+  });
+  win.webContents.on('doReset', function (s) {
+    /*sketch.UI.message(s)*/
+    doResetSvgo();
   });
   win.webContents.on('setNewValues', function (s) {
     var newValue = s;

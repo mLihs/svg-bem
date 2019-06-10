@@ -11,22 +11,26 @@ import BrowserWindow from 'sketch-module-web-view'
 export function openSettings() {
   // Plugin was run from the menu, so let's open the settings window
 
+  var svgoJSON = getConfig()
 
   function writeNewSvgo(value){
-    fs.writeFileSync(svgoJSONFilePath, JSON.stringify(value, null, '  '), 'utf8')
+    fs.writeFileSync(svgoJSONFilePath, JSON.stringify(value, null, '  '), 'utf8');
   }
 
   function doResetSvgo(){
-    fs.writeFileSync(svgoJSONFilePath, JSON.stringify(require('./defaultConfig'), null, '  '), 'utf8')
+    fs.writeFileSync(svgoJSONFilePath, JSON.stringify(require('./defaultConfig'), null, '  '), 'utf8');
+    svgoJSON = getConfig();
+    setValues();
+    console.log("reset!")
   }
 
-  const svgoJSON = getConfig()
+  
 
   let win = new BrowserWindow({ width: 800, height: 600, backgroundColor: '#2e2c29' });
 
   function setValues(){
     win.webContents
-    .executeJavaScript(`someGlobalFunctionDefinedInTheWebview(${JSON.stringify(svgoJSON, null, "")})`)
+    .executeJavaScript(`webviewSetValues(${JSON.stringify(svgoJSON, null, "")})`)
     .then(res => {
       // do something with the result
     })
@@ -36,8 +40,13 @@ export function openSettings() {
 
   // Wait For Jquery until post Vars
   win.webContents.on('initJQuery', function(s) {
-    sketch.UI.message(s)
+    /*sketch.UI.message(s)*/
     setValues();
+  })
+
+  win.webContents.on('doReset', function(s) {
+    /*sketch.UI.message(s)*/
+    doResetSvgo();
   })
 
 

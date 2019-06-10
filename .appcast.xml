@@ -1,20 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
-    <title>SVG BEM</title>
-    <link>https://raw.githubusercontent.com/mLihs/svg-bem/master/.appcast.xml</link>
-    <description>A Plugin for SVG export to convert IDs to Classes, create BEM Naming Based on Layes and using SVGO to compresse and Clean up SVGs, right when you export them. This Plugin *requires* Sketch 52. The Plugin bases on the original Svgo Compressor from BohemianCoding (https://raw.githubusercontent.com/BohemianCoding/svgo-compressor)</description>
-    <language>en</language>
-		<item>
-			<title>Version 1.1.3</title>
-			<description>
-				<![CDATA[
-					<ul>
-						<li>Support Sketch v52+</li>
-					</ul>
-				]]>
-			</description>
-			<enclosure url="https://github.com/mLihs/svg-bem/releases/download/1.1.3/SVG.BEM.sketchplugin.zip" sparkle:version="1.1.3" type="application/octet-stream" />
-		</item>
+    <item>
+      <enclosure url="https://github.com/mLihs/svg-bem/releases/download/1.1.3/SVG.BEM.sketchplugin.zip" sparkle:version="1.1.3"/>
+    </item>
   </channel>
 </rss>

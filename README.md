@@ -1,4 +1,4 @@
-![svg bem logo](https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/svg_bem_logo.png = 280x)
+![svg bem logo](https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/svg_bem_logo.png){ width: 240px; }
 
 # SVG BEM
 
@@ -21,7 +21,7 @@ If you’re not happy with the default settings of SVG BEM, you can select **Plu
 
 ### Top level settings
 
-![svg bem logo](https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/look.png =480x)
+![svg bem logo](https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/look.png){ width: 480px; }
 
 - `ID To Class Conversion`: Turn On or OFF the SVG IDs to Classes conversion
 - `#*?&@ Replacement`: Relplace all special charakter by the specified seperator

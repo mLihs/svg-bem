@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="156" height="152" viewBox="0 0 156 152">
-  <g fill="none" fill-rule="evenodd" class="testicon">
-    <g fill="#D8D8D8" stroke="#979797" class="square-go" transform="translate(14 8)">
-      <rect width="94" height="94" x=".5" y=".5" class="square"/>
-      <rect width="94" height="94" x=".5" y=".5" class="square"/>
+  <g id="testicon" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+    <g id="square-go" fill="#D8D8D8" stroke="#979797" transform="translate(14 8)">
+      <rect id="square" width="94" height="94" x=".5" y=".5"/>
+      <rect id="square" width="94" height="94" x=".5" y=".5"/>
     </g>
-    <rect width="94" height="94" x="43.5" y="45.5" fill="#D8D8D8" stroke="#979797" class="square"/>
+    <rect id="square" width="94" height="94" x="43.5" y="45.5" fill="#D8D8D8" stroke="#979797"/>
   </g>
 </svg>

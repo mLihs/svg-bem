@@ -8,7 +8,7 @@
     "main": "SVG BEM.sketchplugin",
     "manifest": "src/manifest.json",
     "identifier": "com.atomatic.plugins.svg-bem",
-    "appcast": ".appcast.xml",
+    "appcast": "https://raw.githubusercontent.com/mLihs/svg-bem/master/.appcast.xml",
     "assets": [
       "assets/**/*"
     ]

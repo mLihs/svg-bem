@@ -26,7 +26,10 @@
   "devDependencies": {
     "@skpm/builder": "^0.5.10"
   },
-  "repository": "https://github.com/mLihs/svg-bem.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mLihs/svg-bem.git"
+  },
   "dependencies": {
     "@skpm/child_process": "^0.2.4",
     "@skpm/dialog": "^0.2.3",

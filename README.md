@@ -1,3 +1,5 @@
+![svg bem logo](https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/svg_bem_logo.png)
+
 # SVG BEM
 
 A Plugin for SVG export to convert IDs to Classes, create BEM Naming based on the layes of the artboard. Furthermore it uses SVGO to compress and Clean up SVGs, right when you export them. This Plugin *requires* Sketch 52. The Plugin bases on the original Svgo Compressor from Bohemian Coding (https://raw.githubusercontent.com/BohemianCoding/svgo-compressor)
@@ -9,7 +11,8 @@ A Plugin for SVG export to convert IDs to Classes, create BEM Naming based on th
 
 ## Usage
 
-The SVG BEM SVGO Compressor will compress your SVG assets whenever you export them, without you having to do anything.
+The SVG BEM extends the standard Sketch SVG Export and compress your SVG assets whenever you export them. **You have to do anything**.
+
 
 
 ## Editing Settings
@@ -18,11 +21,11 @@ If you’re not happy with the default settings of SVG BEM, you can select **Plu
 
 ### Top level settings
 
-- `ID To Class`: convert IDs to Classes
-- `BEM Conversion`: Turn on the Convertion to BEM Styled ID/Class Names
-- `Bem Seperator`: Charakter used as seperator
-- `Special Character Replacement`: Charakter used as replacement for special character
-- `debug`: Print some logs to help debug the SVGO configuration
+- `ID To Class Conversion`: Turn On or OFF the SVG IDs to Classes conversion
+- `#*?&@ Replacement`: Relplace all special charakter by the specified seperator
+- `Names to BEM Sty Conversion`: Turn On or OFF the converstion to BEM style
+- `BEM Seperator`: Specified seperator for the BEM style.
+
 
 ### SVGO Plugins Settings
 

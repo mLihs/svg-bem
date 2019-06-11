@@ -1,5 +1,5 @@
 {
-  "compatibleVersion": 3.8,
+  "compatibleVersion": 52,
   "bundleVersion": 1,
   "identifier": "com.atomatic.plugins.svg-bem",
   "icon": "svg-bem.png",

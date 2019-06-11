@@ -66209,8 +66209,9 @@ function openSettings() {
 
   var win = new sketch_module_web_view__WEBPACK_IMPORTED_MODULE_8___default.a({
     width: 800,
-    height: 600,
-    backgroundColor: '#2e2c29'
+    height: 650,
+    backgroundColor: '#2e2c29',
+    alwaysOnTop: true
   });
 
   function setValues() {

@@ -21,7 +21,7 @@ If you’re not happy with the default settings of SVG BEM, you can select **Plu
 
 ### Top level settings
 
-<img src="https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/look.png" alt="Plugin View" width="480">
+<img src="https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/look.jpg" alt="Plugin View" width="480">
 
 - `ID To Class Conversion`: Turn On or OFF the SVG IDs to Classes conversion
 - `#*?&@ Replacement`: Relplace all special charakter by the specified seperator

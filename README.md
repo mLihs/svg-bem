@@ -25,6 +25,8 @@ If you’re not happy with the default settings of SVG BEM, you can select **Plu
 - `Names to BEM Sty Conversion`: Turn On or OFF the conversion to BEM style.
 - `BEM Seperator`: Specified separator for the BEM style.
 
+
+
 - `ID To Class Conversion`: 将SVG ID打开或关闭为Class转换
 - `#*?&@ Replacement`: 用指定的分隔符替换所有特殊字符。
 - `Names to BEM Sty Conversion`: 打开或关闭转换为BEM样式。

@@ -14,7 +14,9 @@ The SVG BEM extends the standard Sketch SVG Export and compress your SVG assets 
 每当您导出SVG BEM时，SVG BEM都会扩展标准的Sketch SVG导出和压缩SVG资产。 
 **你必须做任何事情**。
 
+
 <img src="https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/example.jpg" alt="SVG Example" width="960">
+
 
 ## Editing Settings
 

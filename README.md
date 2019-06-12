@@ -14,29 +14,24 @@ The SVG BEM extends the standard Sketch SVG Export and compress your SVG assets 
 
 <img src="https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/example.jpg" alt="SVG BEM LOGO" width="960">
 
-<img src="https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/look.jpg" alt="Plugin View" width="480">
+## Editing Settings
+
+If you’re not happy with the default settings of SVG BEM, you can select **Plugins › SVG BEM › Setting** and change your defaults based on your needs.
 
 - `ID To Class Conversion`: Turn On or OFF the SVG IDs to Classes conversion // 将SVG ID打开或关闭为Class转换
 - `#*?&@ Replacement`: Replace all special character by the specified separator. // 用指定的分隔符替换所有特殊字符。
 - `Names to BEM Sty Conversion`: Turn On or OFF the conversion to BEM style.// 打开或关闭转换为BEM样式。
 - `BEM Seperator`: Specified separator for the BEM style.// BEM样式的指定分隔符。
 
+<img src="https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/look.jpg" alt="Plugin View" width="480">
 
 ## Install
 
 - Download [SVG BEM](https://github.com/mLihs/svg-bem/releases/latest) & unzip it.
 - Double click **SVG BEM.sketchplugin** to install the Plugin.
 
-## Usage
-
-The SVG BEM extends the standard Sketch SVG Export and compress your SVG assets whenever you export them. **You have to do anything**.
 
 
-
-
-## Editing Settings
-
-If you’re not happy with the default settings of SVG BEM, you can select **Plugins › SVG BEM › Setting** and change your defaults based on your needs.
 
 
 

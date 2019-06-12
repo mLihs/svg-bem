@@ -26,7 +26,7 @@ If you’re not happy with the default settings of SVG BEM, you can select **Plu
 - BEM Seperator: Specified separator for the BEM style.BEM样式的指定分隔符
 
 
-<img src="https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/look.jpg" alt="Plugin View" width="360">
+<img src="https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/look.jpg" alt="Plugin View" width="480">
 
 ## Install
 

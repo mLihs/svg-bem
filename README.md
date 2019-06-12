@@ -19,6 +19,7 @@ The SVG BEM extends the standard Sketch SVG Export and compress your SVG assets 
 
 ### Specific IDs or Classes Names
 If you need a specific ID or Class yust use the **#** or **.** as prefix in ur Sketch layers.
+
 如果您需要特定ID或Class，请使用 **＃** 或 **.** 作为草图图层中的前缀。
 
 ### Plugin Seetings

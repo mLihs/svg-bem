@@ -26,12 +26,6 @@ If you’re not happy with the default settings of SVG BEM, you can select **Plu
 - BEM Seperator: Specified separator for the BEM style.BEM样式的指定分隔符
 
 
-
-- ID To Class Conversion: 将SVG ID打开或关闭为Class转换
-- #*?&@ Replacement: 用指定的分隔符替换所有特殊字符。
-- Names to BEM Sty Conversion: 打开或关闭转换为BEM样式。
-- BEM Seperator: BEM样式的指定分隔符。
-
 <img src="https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/look.jpg" alt="Plugin View" width="360">
 
 ## Install

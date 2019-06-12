@@ -12,7 +12,7 @@ SVG BEM是这个插件帮你在的SVG创造BEM命名和改变ID做类。SVG BEM�
 
 ## Install
 
-- Download [SVG BEM](https://github.com/mLihs/svg-bem/releases/) & unzip it.
+- Download [SVG BEM](https://github.com/mLihs/svg-bem/releases/latest) & unzip it.
 - Double click **SVG BEM.sketchplugin** to install the Plugin.
 
 ## Usage

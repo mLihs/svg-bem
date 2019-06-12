@@ -8,9 +8,11 @@ A Plugin for SVG export to convert IDs to Classes, create BEM Naming based on th
 
 ## Usage
 
-The SVG BEM extends the standard Sketch SVG Export and compress your SVG assets whenever you export them. **You have to do anything**. 
+The SVG BEM extends the standard Sketch SVG Export and compress your SVG assets whenever you export them. 
+**You have to do anything**. 
 
-每当您导出SVG BEM时，SVG BEM都会扩展标准的Sketch SVG导出和压缩SVG资产。 **你必须做任何事情**。
+每当您导出SVG BEM时，SVG BEM都会扩展标准的Sketch SVG导出和压缩SVG资产。 
+**你必须做任何事情**。
 
 <img src="https://raw.githubusercontent.com/mLihs/svg-bem/master/doc/img/example.jpg" alt="SVG BEM LOGO" width="960">
 

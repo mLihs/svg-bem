@@ -26,7 +26,7 @@ export function openSettings() {
 
   
 
-  let win = new BrowserWindow({ width: 800, height: 650, backgroundColor: '#2e2c29', alwaysOnTop:true });
+  let win = new BrowserWindow({ width: 800, height: 664, backgroundColor: '#2e2c29', alwaysOnTop:true });
 
   function setValues(){
     win.webContents

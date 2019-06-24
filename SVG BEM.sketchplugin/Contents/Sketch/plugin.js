@@ -98,7 +98,7 @@ var exports =
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/da15a48d83b07e502af1545872f50656.html").path();
+module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/e576e121dd43ec5deb6425172290889e.html").path();
 
 /***/ }),
 
@@ -66209,7 +66209,7 @@ function openSettings() {
 
   var win = new sketch_module_web_view__WEBPACK_IMPORTED_MODULE_8___default.a({
     width: 800,
-    height: 650,
+    height: 664,
     backgroundColor: '#2e2c29',
     alwaysOnTop: true
   });

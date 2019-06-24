@@ -287,6 +287,39 @@
 		border: 1px solid rgba(0,0,0,0.20);
 	}
 
+	.info-code {
+		border-radius: 4px;
+		padding: 8px;
+		margin:12px 0 32px 0 ;
+		font-size: 10px;
+		line-height: 14px;
+		background: rgba(0,0,0,0.15);
+		border: 1px solid rgba(0,0,0,0.2);
+
+	}
+
+	.info-code .heightlight-type {
+		background: rgba(255, 111, 97, 1);
+		padding: 0 2px;
+		border-radius: 2px;
+		color: white;
+	}
+
+    .info-code .heightlight-name {
+    	background: rgba(103, 103, 103, 1);
+		padding: 0 2px;
+		border-radius: 2px;
+		color: white;
+	}
+
+	.example {
+		font-size: 10px;
+		line-height: 14px;
+		font-weight: bold;
+
+	}
+
+
 </style>
 
 
@@ -295,8 +328,17 @@
 
 	<div class="form-wrap">
 		<h1><strong>SVG BEM</strong> - Export Settings</h1>
-		<p class="info">SVG BEM extends the standard Sketch SVG Export!</p>
-		<h3>Css Setings</h3>
+		 <!-- <p class="info">SVG BEM extends the standard Sketch SVG Export!</p> -->
+		 
+		 <p class="info-code">
+		 	<span class="example">SVG Code Preview</span></br>
+			&lt;svg&gt;</br>
+			&emsp;&lt;g <span class="heightlight-type">id</span>=<span class="heightlight-name heightlight-group run-animation">"icon"</span> fill="#D8D8D8"&gt;</br>
+      			&emsp;&emsp;&lt;rect <span class="heightlight-type">id</span>=<span class="heightlight-name heightlight-child">"child"</span> width="12" height="12"/&gt;</br>
+      		&emsp;&lt;/g&gt;</br>
+      		&lt;/svg&gt;
+		</p>
+		<h3>CSS Setings</h3>
 		<hr>
 		<form>
 		  <fieldset>
@@ -339,6 +381,8 @@
 		    </ul>
 		  </fieldset> 
 		</form>
+
+		
 
 		<div class="settting__button">
 			<button id="reset-setings">Reset</button>
@@ -383,6 +427,49 @@
 
 		}
 
+
+		$('#id-to-class').change(function(e){
+			setSvgExample();
+
+		})
+
+		$('#bem-conversion').change(function(e){
+
+			setSvgExample();
+		})
+
+		$('#bem-sperator').on('propertychange input',function(e){
+			setSvgExample();
+		})
+
+		function setSvgExample(){
+
+			var nameGroup = "icon";
+			var nameChild = "child";
+			var bemSeperator = $('#bem-sperator').val();
+			
+			var idToClassChecked = $('#id-to-class').prop("checked");
+			if(idToClassChecked){
+				$(".heightlight-type").html("class");
+			} else if(!idToClassChecked){
+				$(".heightlight-type").html("id");
+
+			}
+
+			var idToClassChecked = $('#bem-conversion').prop("checked");
+			if(idToClassChecked){
+				$(".heightlight-group").html(nameGroup);
+				$(".heightlight-child").html(nameGroup +bemSeperator+ nameChild);
+			} else if(!idToClassChecked){
+				$(".heightlight-group").html(nameGroup);
+				$(".heightlight-child").html(nameChild);
+
+			}
+
+
+		}
+
+
 		function getValues(){
 			var obj = new Object()
 			var idToClass = $('#id-to-class').prop("checked");
@@ -391,7 +478,6 @@
 			var specialChar = $('#special-char').val();
 			obj = {'idToClass': idToClass, 'bemConversion':bemConversion, 'bemSeperator':bemSeperator, 'specialChar':specialChar}
 			window.postMessage('setNewValues', obj);
-			
 		}
 
 		function resetValue(){
@@ -406,6 +492,7 @@
 			setCheckBox ('#bem-conversion', params.bem);
 			$('#bem-sperator').val(params.bemSeperator);
 			$('#special-char').val(params.charSeperator);
+			setSvgExample()
 		}
 		
 		
@@ -420,10 +507,14 @@
   			return false;
 		});
 
+
+
 		function init(){
 			window.postMessage('initJQuery', 'Init Jquery');
 			
 		}
+
+
 
 		//setValues(testObjec)
 		init();

@@ -10,6 +10,7 @@ export default {
   cleanupNumericValues: require('svgo/plugins/cleanupNumericValues'),
   collapseGroups: require('svgo/plugins/collapseGroups'),
   convertColors: require('svgo/plugins/convertColors'),
+  convertEllipseToCircle: require('svgo/plugins/convertEllipseToCircle'),
   convertPathData: require('svgo/plugins/convertPathData'),
   convertShapeToPath: require('svgo/plugins/convertShapeToPath'),
   convertStyleToAttrs: require('svgo/plugins/convertStyleToAttrs'),
@@ -47,5 +48,6 @@ export default {
   removeXMLNS: require('svgo/plugins/removeXMLNS'),
   removeXMLProcInst: require('svgo/plugins/removeXMLProcInst'),
   reusePaths: require('svgo/plugins/reusePaths'),
-  sortAttrs: require('svgo/plugins/sortAttrs')
+  sortAttrs: require('svgo/plugins/sortAttrs'),
+  sortDefsChildren: require('svgo/plugins/sortDefsChildren')
 }

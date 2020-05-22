@@ -51,6 +51,7 @@ exports.fn = function(item, params) {
     return str
   }
 
+
   if (item.isElem('defs')) {
     var itemChilds = item.content;
     itemChilds.forEach(function(e) {

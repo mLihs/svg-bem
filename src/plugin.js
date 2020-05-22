@@ -86,6 +86,8 @@ export function compress(context) {
     ? Number(svgoJSON.floatPrecision)
     : undefined;
 
+
+
   const parsedSVGOPlugins = []
   svgoJSON.plugins.forEach(item => {
     if (typeof item.enabled !== 'undefined' && !item.enabled) {
@@ -122,18 +124,23 @@ export function compress(context) {
       // Set floatPrecision across all the plugins
       if (floatPrecision && 'floatPrecision' in plugin.params) {
         plugin.params.floatPrecision = floatPrecision
+
+
       }
       if (svgoJSON.debug) log('—› default params: ' + JSON.stringify(plugin.params, null, 2))
     }
     if (item.params != null) {
       if (typeof plugin.params === 'undefined') {
         plugin.params = {}
+
       }
       for (var attrname in item.params) {
         plugin.params[attrname] = item.params[attrname]
       }
       if (svgoJSON.debug) log('—› resulting params: ' + JSON.stringify(plugin.params, null, 2))
+         
     }
+
     parsedSVGOPlugins.push([plugin])
   })
 
@@ -143,6 +150,7 @@ export function compress(context) {
     var currentExport = exports[i]
     if (currentExport.request.format() == 'svg') {
       filesToCompress.push(currentExport.path)
+      
     }
   }
 

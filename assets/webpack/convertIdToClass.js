@@ -47,7 +47,10 @@ exports.fn = function(item, params) {
   //    layer A
   function cleanName (str){
     str = str.match(/[^\/]+$/g)[0];
+    str = str.replace(/(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g, "")
+    str = str.replace(/(^[-])/g, "")
     str = str.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/g, params.charSeperator).toLowerCase()
+
     return str
   }
 

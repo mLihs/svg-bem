@@ -154,6 +154,7 @@ export function compress(context) {
     }
   }
 
+
   if (filesToCompress.length > 0) {
     if (svgoJSON.debug) log('Let‘s go…')
     let originalTotalSize = 0

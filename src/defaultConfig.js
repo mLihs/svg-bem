@@ -63,6 +63,7 @@ module.exports = {
     { "name": "addAttributesToSVGElement", enabled: false },
     { "name": "removeOffCanvasPaths", enabled: false },
     { "name": "reusePaths", enabled: false },
+    {"name": "convertPathData", "params": { "floatPrecision": 3, "transformPrecision": 5, "noSpaceAfterFlags": false} },
     { "path": "SVG BEM.sketchplugin/Contents/Resources/webpack/convertIdToClass.js", "enabled": true, "params": {"idToClass": true, "bem": true, "bemSeperator": "__", "charSeperator": "-"} }
   ]
 }
